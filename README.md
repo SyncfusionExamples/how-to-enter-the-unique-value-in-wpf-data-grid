@@ -4,7 +4,7 @@ How to enter the unique value in WPF DataGrid (SfDataGrid) ?
 
 # About the sample
 
-In SfDataGrid, you can make a specific column accept unique value per row using SfDataGrid.CurrentCellValidating event.
+In [WPF DataGrid](https://www.syncfusion.com/wpf-ui-controls/datagrid) (SfDataGrid), you can make a specific column accept unique value per row using SfDataGrid.CurrentCellValidating event.
 
 ```Xaml
 <syncfusion:SfDataGrid x:Name="dataGrid"  ItemsSource="{Binding Orders}" AutoGenerateColumns="False" AllowEditing="True" CurrentCellValidating="dataGrid_CurrentCellValidating" >
