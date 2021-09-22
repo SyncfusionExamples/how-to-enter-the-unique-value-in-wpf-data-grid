@@ -34,5 +34,8 @@ private void dataGrid_CurrentCellValidating(object sender, Syncfusion.UI.Xaml.Gr
     }
 }
 ```
+
+KB article - [How to enter the unique value in WPF DataGrid (SfDataGrid)?](https://www.syncfusion.com/kb/12043/how-to-enter-the-unique-value-in-wpf-datagrid-sfdatagrid)
+
 ## Requirements to run the demo
  Visual Studio 2015 and above versions
