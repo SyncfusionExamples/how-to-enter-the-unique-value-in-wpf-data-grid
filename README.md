@@ -1,13 +1,14 @@
-# How to enter the unique value in WPF DataGrid (SfDataGrid) ?
+# How Column Accept Unique Value Per Row Using WPF DataGrid?
 
-This sample show cases how to enter the unique value in [WPF DataGrid](https://www.syncfusion.com/wpf-ui-controls/datagrid) (SfDataGrid)?
+This sample show cases how to enter the unique value per row in [WPF DataGrid](https://www.syncfusion.com/wpf-controls/datagrid) (SfDataGrid).
 
-# About the sample
+You can make a specific column accept unique value per row using [SfDataGrid.CurrentCellValidating](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_CurrentCellValidating) event in `DataGrid`.
 
-You can make a specific column accept unique value per row using [SfDataGrid.CurrentCellValidating](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_CurrentCellValidating) event in [WPF DataGrid](https://www.syncfusion.com/wpf-ui-controls/datagrid) (SfDataGrid).
-
-```Xaml
-<syncfusion:SfDataGrid x:Name="dataGrid"  ItemsSource="{Binding Orders}" AutoGenerateColumns="False" AllowEditing="True" CurrentCellValidating="dataGrid_CurrentCellValidating" >
+#### XAML
+``` xml
+<syncfusion:SfDataGrid x:Name="dataGrid"  ItemsSource="{Binding Orders}" 
+                       AutoGenerateColumns="False" AllowEditing="True" 
+                       CurrentCellValidating="dataGrid_CurrentCellValidating" >
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:GridTextColumn MappingName="OrderID" HeaderText="Order ID" />
         <syncfusion:GridTextColumn MappingName="CustomerID" HeaderText="Customer ID" />
@@ -17,6 +18,8 @@ You can make a specific column accept unique value per row using [SfDataGrid.Cur
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 ```
+
+#### C#
 ```c#
 private void dataGrid_CurrentCellValidating(object sender, Syncfusion.UI.Xaml.Grid.CurrentCellValidatingEventArgs e)
 {
@@ -35,7 +38,7 @@ private void dataGrid_CurrentCellValidating(object sender, Syncfusion.UI.Xaml.Gr
 }
 ```
 
-KB article - [How to enter the unique value in WPF DataGrid (SfDataGrid)?](https://www.syncfusion.com/kb/12043/how-to-enter-the-unique-value-in-wpf-datagrid-sfdatagrid)
+![Entering unique value per row using CurrentCellValidating](EnterSpecficValuePerRow.gif)
 
 ## Requirements to run the demo
  Visual Studio 2015 and above versions
